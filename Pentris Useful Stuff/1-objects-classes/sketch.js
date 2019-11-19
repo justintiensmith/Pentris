@@ -1,8 +1,14 @@
-
 function setup() {
   createCanvas(1500, 500);
   background("purple");
 }
+
+
+//
+//   function mouseReleased(){
+//
+//   }
+// }
 
 function draw(){
   ulysess();
@@ -14,6 +20,15 @@ function draw(){
 
   translate(940,0);
   grid();
+
+  let colorcheck = get (mouseX, mouseY);
+  print(colorcheck)
+
+  if (colorcheck[0]==255 && colorcheck[1]==255 && colorcheck[2]==255 && colorcheck[3]==255){
+
+  print ('it works')
+
+}
 }
 
 function grid() {
@@ -46,11 +61,13 @@ vertex(350, 100);
 vertex(350, 50);
 vertex(400, 50);
 vertex(400, 50);
-vertex(400,150);
-vertex(250,150);
-vertex(250,50);
+vertex(400, 150);
+vertex(250, 150);
+vertex(250, 50);
   endShape();
 }
+
+
 
 function vector(){
   beginShape(vector);

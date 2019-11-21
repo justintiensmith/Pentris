@@ -1,23 +1,15 @@
-
 function setup(){
   createCanvas(1500, 500);
 }
 
-let colorcheck = get(mouseX, mouseY)
-
-Print(colorcheck) [255,255,0,255]
-
-if(colorcheck[0]== 255)
-
-
 function draw(){
-  background("white");
+  background("purple");
   Fredrick();
   Ivanka();
   Lorelai();
   Nathaniel();
-  ellipse(150, 140, 100, 100);
-
+  Theodore();
+  Pilar();
 }
 
 
@@ -58,7 +50,7 @@ function Lorelai(){
   vertex(350,300);
   endShape();
 }
-z
+
 function Nathaniel(){
   fill("white")
   beginShape();
@@ -70,5 +62,31 @@ function Nathaniel(){
   vertex(500, 300);
   vertex(500, 200);
   vertex(550, 200);
+  endShape();
+}
+
+function Theodore(){
+  fill("white")
+  beginShape();
+  vertex(800, 100);
+  vertex(950, 100);
+  vertex(950, 150);
+  vertex(900, 150);
+  vertex(900, 250);
+  vertex(850, 250);
+  vertex(850, 150);
+  vertex(800, 150);
+  endShape();
+}
+
+function Pilar(){
+  fill("white")
+  beginShape();
+  vertex(700, 100);
+  vertex(750, 100);
+  vertex(750, 250);
+  vertex(650, 250);
+  vertex(650, 150);
+  vertex(700, 150)
   endShape();
 }

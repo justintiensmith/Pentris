@@ -3,7 +3,7 @@ function setup(){
 }
 
 function draw(){
-  background("purple");
+  background("blue");
   Fredrick();
   Ivanka();
   Lorelai();
@@ -15,78 +15,54 @@ function draw(){
 
 function Fredrick(){
   fill("white")
-  beginShape(Fredrick);
-  vertex(100, 100);
-  vertex(200, 100);
-  vertex(200, 150);
-  vertex(150, 150);
-  vertex(150, 250);
-  vertex(100, 250);
-  vertex(100, 200);
-  vertex(50, 200);
-  vertex(50, 150);
-  vertex(100, 150);
-  endShape();
+  rect(100,100,50,50);
+  rect(150,100,50,50);
+  rect(100,150,50,50);
+  rect(50,150,50,50);
+  rect(100,200,50,50);
 }
 
 function Ivanka(){
   fill("white")
-  beginShape();
-  vertex(250, 100);
-  vertex(300, 100);
-  vertex(300, 350);
-  vertex(250, 350);
-  endShape();
+  rect(250,100,50,50);
+  rect(250,150,50,50);
+  rect(250,200,50,50);
+  rect(250,250,50,50);
+  rect(250,300,50,50);
 }
 
 function Lorelai(){
   fill("white")
-  beginShape();
-  vertex(350, 100);
-  vertex(400, 100);
-  vertex(400, 250);
-  vertex(450, 250);
-  vertex(450,300);
-  vertex(350,300);
-  endShape();
+  rect(350,100,50,50);
+  rect(350,150,50,50);
+  rect(350,200,50,50);
+  rect(350,250,50,50);
+  rect(400,250,50,50);
 }
 
 function Nathaniel(){
   fill("white")
-  beginShape();
-  vertex(550, 100);
-  vertex(600, 100);
-  vertex(600, 250);
-  vertex(550, 250);
-  vertex(550, 300);
-  vertex(500, 300);
-  vertex(500, 200);
-  vertex(550, 200);
-  endShape();
+  rect(500,250,50,50);
+  rect(500,200,50,50);
+  rect(550,150,50,50);
+  rect(550,200,50,50);
+  rect(550,100,50,50);
 }
 
 function Theodore(){
   fill("white")
-  beginShape();
-  vertex(800, 100);
-  vertex(950, 100);
-  vertex(950, 150);
-  vertex(900, 150);
-  vertex(900, 250);
-  vertex(850, 250);
-  vertex(850, 150);
-  vertex(800, 150);
-  endShape();
+  rect(650,100,50,50);
+  rect(700,100,50,50);
+  rect(750,100,50,50);
+  rect(700,150,50,50);
+  rect(700,200,50,50);
 }
 
 function Pilar(){
   fill("white")
-  beginShape();
-  vertex(700, 100);
-  vertex(750, 100);
-  vertex(750, 250);
-  vertex(650, 250);
-  vertex(650, 150);
-  vertex(700, 150)
-  endShape();
+  rect(900,100,50,50);
+  rect(850,150,50,50);
+  rect(900,150,50,50);
+  rect(850,200,50,50);
+  rect(900,200,50,50);
 }

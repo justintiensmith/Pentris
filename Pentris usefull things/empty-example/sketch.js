@@ -1,25 +1,25 @@
 
 let F;
-let I;
+// let I;
 
 
 function setup() {
   createCanvas(1500, 500);
   F = new Fredrick();
-  I = new Ivanka
+  // I = new Ivanka
 }
 
-clicked();{
-  let d = dist(mouseX, mouseY, this.x, this.y)
-  print ('spookey')
-}
+// clicked();{
+//   let d = dist(mouseX, mouseY, this.x, this.y)
+//   print ('spookey')
+// }
 
 
 
 function draw(){
 	background("blue");
     F.drawFredrick();
-    F.moveFredrick();
+    // F.moveFredrick();
     //I.drawIvanka();
 
 
@@ -53,19 +53,19 @@ class Fredrick {
 }
 
 
-class Ivanka {
-
-	constructor(x,y,color){
-		    this.x = 200;
-    		this.y = 100;
-        this.color=("white");
-	}
-	drawIvanka(){  // draw a ball on the screen at x,y
-      fill(this.color);
-      rect(250,100,50,50);
-      rect(250,150,50,50);
-      rect(250,200,50,50);
-      rect(250,250,50,50);
-      rect(250,300,50,50);
-    }
-	}
+// class Ivanka {
+//
+// 	constructor(x,y,color){
+// 		    this.x = 200;
+//     		this.y = 100;
+//         this.color=("white");
+// 	}
+// 	drawIvanka(){  // draw a ball on the screen at x,y
+//       fill(this.color);
+//       rect(250,100,50,50);
+//       rect(250,150,50,50);
+//       rect(250,200,50,50);
+//       rect(250,250,50,50);
+//       rect(250,300,50,50);
+//     }
+// 	}

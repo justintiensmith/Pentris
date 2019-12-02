@@ -1,26 +1,29 @@
 
-let F;
-// let I;
+//let F;
+let I;
+let x = 100
+let y = 100
+
 
 
 function setup() {
   createCanvas(1500, 500);
-  F = new Fredrick();
-  // I = new Ivanka
+  //F = new Fredrick();
+  I = new Ivanka(10,10)
 }
 
-// clicked();{
-//   let d = dist(mouseX, mouseY, this.x, this.y)
-//   print ('spookey')
-// }
+
+
+
+
 
 
 
 function draw(){
 	background("blue");
-    F.drawFredrick();
-    // F.moveFredrick();
-    //I.drawIvanka();
+    //F.drawFredrick();
+    I.drawIvanka();
+
 
 
 
@@ -28,44 +31,52 @@ function draw(){
       print(colorcheck)
 
       if (colorcheck[0]==255 && colorcheck[1]==255 && colorcheck[2]==255 && colorcheck[3]==255){
-      print ('white detected')
+        I.x = mouseX
+        I.y = mouseY
     }
 }
 
 
 
-class Fredrick {
-
-	constructor(x,y,color){
-		    this.x = 100;
-    		this.y = 100;
-        this.color=("white");
-	}
-
-	drawFredrick(){
-    fill(this.color)
-    rect(100,100,50,50);
-    rect(150,100,50,50);
-    rect(100,150,50,50);
-    rect(50,150,50,50);
-    rect(100,200,50,50);
-	}
-}
-
-
-// class Ivanka {
+// //class Fredrick {
 //
 // 	constructor(x,y,color){
-// 		    this.x = 200;
+// 		    this.x = 100;
 //     		this.y = 100;
 //         this.color=("white");
+//         //this.speed = speed;
 // 	}
-// 	drawIvanka(){  // draw a ball on the screen at x,y
-//       fill(this.color);
-//       rect(250,100,50,50);
-//       rect(250,150,50,50);
-//       rect(250,200,50,50);
-//       rect(250,250,50,50);
-//       rect(250,300,50,50);
-//     }
+//
+// 	drawFredrick(){
+//     fill(this.color)
+//     rect(100,100,50,50);
+//     rect(150,100,50,50);
+//     rect(100,150,50,50);
+//     rect(50,150,50,50);
+//     rect(100,200,50,50);
 // 	}
+// }
+
+
+
+
+
+//}
+class Ivanka {
+
+	constructor(x,y,color){
+        this.color=("white");
+        this.x = x;
+        this.y = y;
+
+	}
+	drawIvanka(){  // draw a ball on the screen at x,y
+      fill(this.color);
+      rect(this.x,this.y,50,50);
+      // rect(250,150,50,50);
+      // rect(250,200,50,50);
+      // rect(250,250,50,50);
+      // rect(250,300,50,50);
+
+    }
+	}

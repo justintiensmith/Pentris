@@ -3,7 +3,7 @@ function setup(){
 }
 
 function draw(){
-  background("blue");
+  background("purple");
   Fredrick();
   Ivanka();
   Lorelai();
@@ -12,6 +12,12 @@ function draw(){
   Pilar();
 }
 
+let colorcheck = get (mouseX, mouseY);
+print(colorcheck)
+
+if (colorcheck[0]==255 && colorcheck[1]==255 && colorcheck[2]==255 && colorcheck[3]==255){
+print ('white detected')
+}
 
 function Fredrick(){
   fill("white")

@@ -73,10 +73,10 @@ class Ivanka {
 	drawIvanka(){  // draw a ball on the screen at x,y
       fill(this.color);
       rect(this.x,this.y,50,50);
-      // rect(250,150,50,50);
-      // rect(250,200,50,50);
-      // rect(250,250,50,50);
-      // rect(250,300,50,50);
+      rect(this.x, this.y+50, 50, 50);
+      rect(this.x,this.y+100,50,50);
+      rect(this.x,this.y+150,50,50);
+      rect(this.x,this.y+200,50,50);
 
     }
 	}

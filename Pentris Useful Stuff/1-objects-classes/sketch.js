@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(1440, 500);
-  background("purple");
+  background("orange");
   translate(940,0);
   grid();
   U = new ulysess(200, 200, "white");

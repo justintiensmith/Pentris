@@ -1,95 +1,291 @@
-// Creating animations
-//
-// animations like p5 images should be stored in variables
-// in order to be displayed during the draw cycle
-var sprite;
-//
-// //it's advisable (but not necessary) to load the images in the preload function
-// //of your sketch otherwise they may appear with a little delay
-function preload() {
-//
-//   //create an animation from a sequence of numbered images
-//   //pass the first and the last file name and it will try to find the ones in between
-
-  sprite = loadAnimation('IMG-4592.jpg', 'IMG-4593.jpg', 'IMG-4594.jpg','IMG-4595.jpg','IMG-4596.jpg','IMG-4597.jpg','IMG-4598.jpg','IMG-4599.jpg','IMG-4600.jpg',);
-
-}
+let colorcheck;
 
 function setup() {
-  createCanvas(1000, 1000);
-}
-
-function draw() {
-  background(0, 255, 150);
-
-
-  //specify the animation instance and its x,y position
-  //animation() will update the animation frame as well
-  imageMode(CENTER)
+  createCanvas(1500, 500);
   angleMode(DEGREES)
-  rotate(90);
-  scale(.2);
-  animation(sprite, 2100, -2100);
+  createCanvas (1500, 500);
+  background ("purple");
+  U = new ulysess (100,100,0, false);
+  V = new vector (300,100,0, false);
+  W = new william (500,100,0, false);
+  X = new xavier (100,300,0, false);
+  Y = new yosef (100,500,0, false);
+  Z = new zachary (100,700,0, false);
 
 }
 
+function keyPressed() {
+    if(keyIsDown(32)){ //spacebar
+        if(U.moving==true){
+            U.r += 90
+            print("rotating U")
+        }
+        if(V.moving==true){
+            V.r += 90
+            print("rotating V")
+        }
+        if(W.moving==true){
+            W.r += 90
+            print("rotating W")
+        }
+        if(X.moving==true){
+            X.r += 90
+            print("rotating X")
+        }
+        if(Y.moving==true){
+            Y.r += 90
+            print("rotating Y")
+        }
+        if(Z.moving==true){
+            Z.r += 90
+            print("rotating Z")
+        }
+    }
+}
 
-//Collision detection - Bouncing behavior
+function mousePressed(){
+    colorcheck = get (mouseX, mouseY);
+    print(colorcheck)
+      if (colorcheck[0]==235 && colorcheck[1]==235 && colorcheck[2]==56 && colorcheck[3]==255){
+          print ('picked up U')
+          U.moving = true;
+          V.moving = false;
+          W.moving = false;
+     }
+     if (colorcheck[0]==245 && colorcheck[1]==245 && colorcheck[2]==66 && colorcheck[3]==255){
+         print ('picked up V')
+         V.moving = true;
+         U.moving = false;
+         W.moving = false;
+     }
+      if (colorcheck[0]==128 && colorcheck[1]==128 && colorcheck[2]==255 && colorcheck[3]==255){
+          W.moving = true;
+          U.moving = false;
+          V.moving = false;
+      }
+}
 
-var sprite;
+function mouseDragged(){
 
-function setup() {
-  createCanvas(800, 400);
-//
-//   sprite = new Group();
-//
-//   for(var i=0; i<20; i++)
-//   {
-//     var sprite = createSprite(random(0, width), random(0, height));
-//     sprite.addAnimation('IMG-4592.jpg', 'IMG-4593.jpg', 'IMG-4594.jpg','IMG-4595.jpg','IMG-4596.jpg','IMG-4597.jpg','IMG-4598.jpg','IMG-4599.jpg','IMG-4600.jpg');
-//     sprite.setCollider('sprite', -2, 2, 55);
-//     sprite.setSpeed(random(2, 3), random(0, 360));
-//
-//     //scale affects the size of the collider
-//     circle.scale = random(0.5, 1);
-//     //mass determines the force exchange in case of bounce
-//     circle.mass = circle.scale;
-//     //restitution is the dispersion of energy at each bounce
-//     //if = 1 the circles will bounce forever
-//     //if < 1 the circles will slow down
-//     //if > 1 the circles will accelerate until they glitch
-//     //circle.restitution = 0.9;
-//     circles.add(circle);
-//   }
-//
-//   //all sprites bounce at the screen edges
-//   for(var i=0; i<allSprites.length; i++) {
-//     var s = allSprites[i];
-//     if(s.position.x<0) {
-//       s.position.x = 1;
-//       s.velocity.x = abs(s.velocity.x);
-//     }
-//
-//     if(s.position.x>width) {
-//       s.position.x = width-1;
-//       s.velocity.x = -abs(s.velocity.x);
-//     }
-//
-//     if(s.position.y<0) {
-//       s.position.y = 1;
-//       s.velocity.y = abs(s.velocity.y);
-//     }
-//
-//     if(s.position.y>height) {
-//       s.position.y = height-1;
-//       s.velocity.y = -abs(s.velocity.y);
-//     }
-//   }
-//
-//   drawSprites();
-//
-// }
-//
-// //
-// // check this link out!
-// // http://molleindustria.github.io/p5.play/examples/index.html?fileName=collisions4.js
+    if(U.moving == true){
+        U.x=mouseX;
+        U.y=mouseY;
+    }
+
+    if(V.moving == true){
+        V.x=mouseX;
+        V.y=mouseY;
+    }
+
+    if(W.moving == true){
+        W.x=mouseX;
+        W.y=mouseY;
+    }
+}
+
+function mouseReleased(){
+
+    colorcheck = get(mouseX,mouseY)
+
+    if (U.moving == true && colorcheck[0]>129){
+        U.x = 100;
+        U.y = 100;
+        U.moving = false;
+        print("U was not on the purple")
+    }
+
+    if (V.moving == true && colorcheck[0]>129){
+        V.x = 300;
+        V.y = 100;
+        V.moving = false;
+        print("V was not on the purple")
+    }
+
+    if (W.moving == true && colorcheck[0]>129){
+        W.x = 500;
+        W.y = 100;
+        W.moving = false;
+}
+    else {
+       U.moving = false;
+       V.moving = false;
+       W.moving = false;
+       print("released the piece")
+    }
+
+}
+
+function draw(){
+  background("purple")
+  U.drawUlysess ();
+  V.drawVector();
+  W.drawWilliam();
+  translate(940,0);
+  grid();
+
+}
+
+function grid() {
+  line(50, 50, 50, 450);
+  line(100, 50, 100, 450);
+  line(150, 50, 150, 450);
+  line(200, 50, 200, 450);
+  line(250, 50, 250, 450);
+  line(300, 50, 300, 450);
+  line(350, 50, 350, 450);
+  line(400, 50, 400, 450);
+  line(450, 50, 450, 450);
+  line(50, 50, 450, 50);
+  line(50, 100, 450, 100);
+  line(50, 150, 450, 150);
+  line(50, 200, 450, 200);
+  line(50, 250, 450, 250);
+  line(50, 300, 450, 300);
+  line(50, 350, 450, 350);
+  line(50, 400, 450, 400);
+  line(50, 450, 450, 450);
+}
+
+class ulysess {
+	constructor(x,y,r,moving) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.moving = moving;
+	}
+	drawUlysess(){
+    if(this.moving == true){
+        noFill();
+    }
+    else{
+        fill(235,235,56,255)
+    }
+    push();
+    translate (this.x,this.y);
+    rotate (this.r);
+    rect(-75, -50, 50, 50);
+    rect(-75, 0, 50, 50);
+    rect(-25, 0, 50, 50);
+    rect(25, 0, 50, 50);
+    rect(25, -50, 50, 50);
+    pop();
+	}
+}
+
+class vector {
+	constructor(x,y,r,moving) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.moving = moving;
+	}
+	drawVector(){
+        if(this.moving == true){
+            noFill();
+        }
+        else{
+            fill(245, 245, 66,255)
+        }
+    push();
+    translate (this.x,this.y);
+    rotate (this.r);
+    rect(-75, -75, 50, 50);
+    rect(-75, -25, 50, 50);
+    rect(-75, 25, 50, 50);
+    rect(-25, 25, 50, 50);
+    rect(25, 25, 50, 50);
+    pop();
+	}
+}
+
+class william {
+	constructor(x,y,r,moving) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.moving = moving;
+	}
+  drawWilliam(){
+        if(this.moving == true){
+            noFill();
+        }
+        else{
+            fill(128,128,255)
+        }
+    push();
+    translate (this.x,this.y);
+    rotate (this.r);
+    rect(-75, -75, 50, 50);
+    rect(-25, -75, 50, 50);
+    rect(-25, -25, 50, 50);
+    rect(25, -25, 50, 50);
+    rect(25, 25, 50, 50);
+    pop();
+ }
+}
+
+class xavier {
+	constructor(x,y,r,moving) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.moving = moving;
+	}
+  drawXavier(){
+        if(this.moving == true){
+            noFill();
+        }
+        else{
+            fill(128,128,255)
+          }
+    push();
+    translate (this.x,this.y)
+    rotate (this.r);
+    rect(-25, 75, 50, 50);
+    rect(-75, -25, 50, 50);
+    rect(-25, -25, 50, 50);
+    rect(25, -25, 50, 50);
+    rect(-25, 25, 50, 50);
+    pop();
+ }
+}
+
+class yosef {
+	constructor(x,y,r,moving) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.moving = moving;
+	}
+	drawYosef(x,y,r){
+    push();
+    translate (this.x,this.y)
+    rotate (this.r);
+    rect(450, 100, 50, 50);
+    rect(500, 100, 50, 50);
+    rect(550, 100, 50, 50);
+    rect(550, 50, 50, 50);
+    rect(600, 100, 50, 50);
+    pop();
+ }
+}
+
+class zachary {
+	constructor(x,y,r,moving) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.moving = moving;
+	}
+	drawZachary(x,y,r){
+    push();
+    translate (this.x,this.y)
+    rotate (this.r);
+    rect(450, 250, 50, 50);
+    rect(500, 250, 50, 50);
+    rect(500, 300, 50, 50);
+    rect(500, 350, 50, 50);
+    rect(550, 350, 50, 50);
+    pop();
+ }
+}

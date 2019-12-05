@@ -3,13 +3,14 @@ let colorcheck;
 function setup() {
   createCanvas(1500, 500);
   angleMode(DEGREES)
-  createCanvas (1500, 500);
+  createCanvas (1500, 600);
   background ("purple");
-  I = new Ivanka (200,200,0, false);
-  F = new Fredrick (300,200,0, false);
-  L = new Lorelai (300, 200, 0, false);
-  N = new Nathaniel (250, 300, 0, false);
-
+  I = new Ivanka (100,150,0, false);
+  F = new Fredrick (250,150,0, false);
+  L = new Lorelai (400, 150, 0, false);
+  N = new Nathaniel (250, 400, 0, false);
+  T = new Theodore (100, 350, 0, false);
+  P = new Pilar (450, 350, 0, false);
 }
 
 function keyPressed() {
@@ -22,10 +23,17 @@ function keyPressed() {
             L.r += 90
             print("rotating L")
         }
-
+        if(P.moving==true){
+            P.r += 90
+            print("rotating P")
+        }
         if(N.moving==true){
             N.r += 90
             print("rotating N")
+        }
+        if(T.moving==true){
+            T.r += 90
+            print("rotating T")
         }
         if(F.moving==true){
             F.r += 90
@@ -45,7 +53,19 @@ function mousePressed(){
           F.moving = false;
           L.moving = false;
           N.moving = false;
+          T.moving = false;
+          P.moving = false;
      }
+
+     if (colorcheck[0]==3 && colorcheck[1]==240 && colorcheck[2]==250 && colorcheck[3]==255){
+         print ('picked up P')
+         I.moving = false;
+         F.moving = false;
+         L.moving = false;
+         N.moving = false;
+         T.moving = false;
+         P.moving = true;
+    }
 
      if (colorcheck[0]==245 && colorcheck[1]==245 && colorcheck[2]==66 && colorcheck[3]==255){
          print ('picked up F')
@@ -53,6 +73,8 @@ function mousePressed(){
          I.moving = false;
          L.moving = false;
          N.moving = false;
+         T.moving = false;
+         P.moving = false;
      }
 
      if (colorcheck[0]==3 && colorcheck[1]==250 && colorcheck[2]==7 && colorcheck[3]==255){
@@ -61,6 +83,8 @@ function mousePressed(){
          I.moving = false;
          L.moving = true;
          N.moving = false;
+         T.moving = false;
+         P.moving = false;
      }
 
      if (colorcheck[0]==255 && colorcheck[1]==0 && colorcheck[2]==10 && colorcheck[3]==255){
@@ -69,6 +93,18 @@ function mousePressed(){
          I.moving = false;
          L.moving = false;
          N.moving = true;
+         T.moving = false;
+         P.moving = false;
+     }
+
+     if (colorcheck[0]==3 && colorcheck[1]==40 && colorcheck[2]==255 && colorcheck[3]==255){
+         print ('picked up I')
+         I.moving = false;
+         F.moving = false;
+         L.moving = false;
+         N.moving = false;
+         T.moving = true;
+         P.moving = false;
      }
 
       if (colorcheck[0]==128){
@@ -76,7 +112,8 @@ function mousePressed(){
           F.moving = false;
           L.moving = false;
           N.moving = false;
-
+          T.moving = false;
+          P.moving = false;
       }
 }
 
@@ -85,6 +122,16 @@ function mouseDragged(){
     if(I.moving == true){
         I.x=mouseX;
         I.y=mouseY;
+    }
+
+    if(P.moving == true){
+        P.x=mouseX;
+        P.y=mouseY;
+    }
+
+    if(T.moving == true){
+        T.x=mouseX;
+        T.y=mouseY;
     }
 
     if(F.moving == true){
@@ -110,7 +157,19 @@ function mouseReleased(){
     if (I.moving == true && colorcheck[0]>129){
         I.x = 100;
         I.moving = false;
-        print("U was not on the purple")
+        print("I was not on the purple")
+    }
+
+    if (P.moving == true && colorcheck[0]>129){
+        P.x = 100;
+        P.moving = false;
+        print("P was not on the purple")
+    }
+
+    if (T.moving == true && colorcheck[0]>129){
+        T.x = 100;
+        T.moving = false;
+        print("T was not on the purple")
     }
 
     if (L.moving == true && colorcheck[0]>129){
@@ -124,14 +183,14 @@ function mouseReleased(){
         N.x = 90;
         N.y=40
         N.moving = false;
-        print("L was not on the purple")
+        print("N was not on the purple")
     }
 
     if (F.moving == true && colorcheck[0]>129){
         F.x = 100;
         F.y=50
         F.moving = false;
-        print("V was not on the purple")
+        print("F was not on the purple")
     }
 
     else{
@@ -139,6 +198,8 @@ function mouseReleased(){
        F.moving = false;
        L.moving = false;
        N.moving = false;
+       T.moving = false;
+       P.moving = false;
        print("released the piece")
     }
 
@@ -150,6 +211,8 @@ function draw(){
   F.drawFredrick();
   L.drawLorelai();
   N.drawNathaniel();
+  T.drawTheodore();
+  P.drawPilar();
   translate(940,0);
   grid();
 
@@ -290,6 +353,66 @@ class Nathaniel {
     rect(50,-50,50,50);
     rect(50,0,50,50);
     rect(50,-100,50,50);
+    pop();
+	}
+}
+
+class Theodore {
+	constructor(x,y,r, moving) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.moving = moving;
+
+	}
+	drawTheodore(){
+
+        if(this.moving == true){
+            noFill();
+        }
+        else{
+            fill(3, 40, 255,255)
+        }
+
+    //translate (200,0)
+    push();
+    translate (this.x,this.y);
+    rotate (this.r);
+    rect(-50,0,50,50);
+    rect(0,0,50,50);
+    rect(50,0,50,50);
+    rect(0,50,50,50);
+    rect(0,100,50,50);
+    pop();
+	}
+}
+
+class Pilar {
+	constructor(x,y,r, moving) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.moving = moving;
+
+	}
+	drawPilar(){
+
+        if(this.moving == true){
+            noFill();
+        }
+        else{
+            fill(3, 240, 250,255)
+        }
+
+    //translate (200,0)
+    push();
+    translate (this.x,this.y);
+    rotate (this.r);
+    rect(0,0,50,50);
+    rect(-50,50,50,50);
+    rect(0,50,50,50);
+    rect(-50,100,50,50);
+    rect(0,100,50,50);
     pop();
 	}
 }

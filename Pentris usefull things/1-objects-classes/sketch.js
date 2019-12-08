@@ -467,7 +467,7 @@ class ulysess {
         noFill();
     }
     else{
-        fill(11, , 15,255)
+        fill(11, 71, 42,255)
     }
     push();
     translate (this.x,this.y);

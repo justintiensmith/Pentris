@@ -12,7 +12,6 @@ function setup() {
   N = new Nathaniel (250, 400, 0, false);
   T = new Theodore (100, 350, 0, false);
   P = new Pilar (450, 350, 0, false);
-<<<<<<< Updated upstream
   U = new Ulysess (200, 200 ,0 ,false);
   V = new Vector (200, 400, 0, false);
   W = new William (300, 500, 0, false);
@@ -672,7 +671,7 @@ class Pilar {
     //translate (200,0)
     push();
     translate (this.x,this.y);
-    rotate (this.r);
+    erotate (this.r);
     rect(0,0,50,50);
     rect(-50,50,50,50);
     rect(0,50,50,50);
@@ -897,7 +896,7 @@ class vector {
     translate (this.x,this.y);
     rotate (this.r);
 <<<<<<< Updated upstream
-    
+
     rect(-75, -25, 50, 50);
     rect(-25, -25, 50, 50);
     rect(-25, 25, 50, 50);

@@ -1,4 +1,3 @@
-
 let colorcheck;
 
 function setup() {
@@ -12,19 +11,9 @@ function setup() {
   N = new Nathaniel (250, 400, 0, false);
   T = new Theodore (100, 350, 0, false);
   P = new Pilar (450, 350, 0, false);
-  U = new Ulysess (200, 200 ,0 ,false);
-  V = new Vector (200, 400, 0, false);
-  W = new William (300, 500, 0, false);
-  X = new Xavier (400, 400, 0, false);
+  U = new ulysess (200, 200 ,0 ,false)
 }
 
-=======
-  U = new ulysess (200, 200 ,0 ,false);
-  V = new vector (200, 400, 0, false);
-
-}
-
->>>>>>> Stashed changes
 function grid() {
   line(50, 50, 50, 450);
   line(100, 50, 100, 450);
@@ -56,17 +45,6 @@ function keyPressed() {
             L.r += 90
             print("rotating L")
         }
-<<<<<<< Updated upstream
-        if(X.moving==true){
-            X.r += 90
-            print("rotating X")
-        }
-        if(W.moving==true){
-            W.r += 90
-            print("rotating W")
-        }
-=======
->>>>>>> Stashed changes
         if(P.moving==true){
             P.r += 90
             print("rotating P")
@@ -79,10 +57,6 @@ function keyPressed() {
             T.r += 90
             print("rotating T")
           }
-          if(V.moving==true){
-              V.r += 90
-              print("rotating V")
-            }
           if(U.moving==true){
               U.r += 90
               print("rotating I")
@@ -108,12 +82,6 @@ function mousePressed(){
           T.moving = false;
           P.moving = false;
           U.moving = false;
-          V.moving = false;
-<<<<<<< Updated upstream
-          W.moving = false;
-          X.moving = false;
-=======
->>>>>>> Stashed changes
      }
 
      if (colorcheck[0]==3 && colorcheck[1]==240 && colorcheck[2]==250 && colorcheck[3]==255){
@@ -125,12 +93,6 @@ function mousePressed(){
          T.moving = false;
          P.moving = true;
          U.moving = false;
-         V.moving = false;
-<<<<<<< Updated upstream
-         W.moving = false;
-         X.moving = false;
-=======
->>>>>>> Stashed changes
     }
 
      if (colorcheck[0]==245 && colorcheck[1]==245 && colorcheck[2]==66 && colorcheck[3]==255){
@@ -142,12 +104,6 @@ function mousePressed(){
          T.moving = false;
          P.moving = false;
          U.moving = false;
-         V.moving = false;
-<<<<<<< Updated upstream
-         W.moving = false;
-         X.moving = false;
-=======
->>>>>>> Stashed changes
      }
 
      if (colorcheck[0]==3 && colorcheck[1]==250 && colorcheck[2]==7 && colorcheck[3]==255){
@@ -159,12 +115,6 @@ function mousePressed(){
          T.moving = false;
          P.moving = false;
          U.moving = false;
-         V.moving = false;
-<<<<<<< Updated upstream
-         W.moving = false;
-         X.moving = false;
-=======
->>>>>>> Stashed changes
      }
 
      if (colorcheck[0]==255 && colorcheck[1]==0 && colorcheck[2]==10 && colorcheck[3]==255){
@@ -176,12 +126,6 @@ function mousePressed(){
          T.moving = false;
          P.moving = false;
          U.moving = false;
-         V.moving = false;
-<<<<<<< Updated upstream
-         W.moving = false;
-         X.moving = false;
-=======
->>>>>>> Stashed changes
      }
 
      if (colorcheck[0]==11 && colorcheck[1]==71 && colorcheck[2]==42 && colorcheck[3]==255){
@@ -193,12 +137,6 @@ function mousePressed(){
          T.moving = false;
          P.moving = false;
          U.moving = true;
-         V.moving = false;
-<<<<<<< Updated upstream
-         W.moving = false;
-         X.moving = false;
-=======
->>>>>>> Stashed changes
      }
 
      if (colorcheck[0]==3 && colorcheck[1]==40 && colorcheck[2]==255 && colorcheck[3]==255){
@@ -210,57 +148,6 @@ function mousePressed(){
          T.moving = true;
          P.moving = false;
          U.moving = false;
-         V.moving = false;
-<<<<<<< Updated upstream
-         W.moving = false;
-         X.moving = false;
-     }
-
-     if (colorcheck[0]==219 && colorcheck[1]==129 && colorcheck[2]==16 && colorcheck[3]==255){
-         print ('picked up I')
-         I.moving = false;
-         F.moving = false;
-         L.moving = false;
-         N.moving = false;
-         T.moving = false;
-         P.moving = false;
-         U.moving = false;
-         V.moving = false;
-         W.moving = true;
-         X.moving = false;
-     }
-
-     if (colorcheck[0]==33 && colorcheck[1]==89 && colorcheck[2]==78 && colorcheck[3]==255){
-         print ('picked up I')
-         I.moving = false;
-         F.moving = false;
-         L.moving = false;
-         N.moving = false;
-         T.moving = false;
-         P.moving = false;
-         U.moving = false;
-         V.moving = false;
-         W.moving = false;
-         X.moving = true;
-=======
->>>>>>> Stashed changes
-     }
-
-     if (colorcheck[0]==209 && colorcheck[1]==71 && colorcheck[2]==202 && colorcheck[3]==255){
-         print ('picked up I')
-         I.moving = false;
-         F.moving = false;
-         L.moving = false;
-         N.moving = false;
-         T.moving = false;
-         P.moving = false;
-         U.moving = false;
-         V.moving = true;
-<<<<<<< Updated upstream
-         W.moving = false;
-         X.moving = false;
-=======
->>>>>>> Stashed changes
      }
 
       if (colorcheck[0]==128){
@@ -271,12 +158,6 @@ function mousePressed(){
           T.moving = false;
           P.moving = false;
           U.moving = false;
-          V.moving = false;
-<<<<<<< Updated upstream
-          W.moving = false;
-          X.moving = false;
-=======
->>>>>>> Stashed changes
       }
 }
 
@@ -290,24 +171,6 @@ function mouseDragged(){
     if(P.moving == true){
         P.x=mouseX;
         P.y=mouseY;
-    }
-
-<<<<<<< Updated upstream
-    if(W.moving == true){
-        W.x=mouseX;
-        W.y=mouseY;
-    }
-
-    if(X.moving == true){
-        X.x=mouseX;
-        X.y=mouseY;
-    }
-
-=======
->>>>>>> Stashed changes
-    if(V.moving == true){
-        V.x=mouseX;
-        V.y=mouseY;
     }
 
     if(U.moving == true){
@@ -352,27 +215,6 @@ function mouseReleased(){
         print("P was not on the purple")
     }
 
-<<<<<<< Updated upstream
-    if (W.moving == true && colorcheck[0]>129){
-        W.x = 100;
-        W.moving = false;
-        print("W was not on the purple")
-    }
-
-    if (X.moving == true && colorcheck[0]>129){
-        X.x = 100;
-        X.moving = false;
-        print("X was not on the purple")
-    }
-
-=======
->>>>>>> Stashed changes
-    if (V.moving == true && colorcheck[0]>129){
-        V.x = 100;
-        V.moving = false;
-        print("V was not on the purple")
-    }
-
     if (U.moving == true && colorcheck[0]>129){
         U.x = 100;
         U.moving = false;
@@ -414,12 +256,6 @@ function mouseReleased(){
        T.moving = false;
        P.moving = false;
        U.moving = false;
-       V.moving = false;
-<<<<<<< Updated upstream
-       W.moving = false;
-       X.moving = false;
-=======
->>>>>>> Stashed changes
        print("released the piece")
     }
 
@@ -434,12 +270,6 @@ function draw(){
   T.drawTheodore();
   P.drawPilar();
   U.drawUlysess();
-  V.drawVector();
-<<<<<<< Updated upstream
-  W.drawWilliam();
-  X.drawXavier();
-=======
->>>>>>> Stashed changes
   translate(940,0);
   grid();
 
@@ -449,8 +279,6 @@ function draw(){
 
 class Ivanka {
 	constructor(x,y,r,moving) {
-<<<<<<< Updated upstream
-=======
         this.x = x;
         this.y = y;
         this.r = r;
@@ -477,57 +305,6 @@ class Ivanka {
 	}
 }
 
-class Fredrick {
-	constructor(x,y,r, moving) {
->>>>>>> Stashed changes
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.moving = moving;
-
-	}
-<<<<<<< Updated upstream
-	drawIvanka(){
-    if(this.moving == true){
-        noFill();
-    }
-    else{
-        fill(150, 3, 250, 255)
-    }
-
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-    rect(0,-100,50,50);
-    rect(0,-50,50,50);
-    rect(0,0,50,50);
-    rect(0,50,50,50);
-    rect(0,100,50,50);
-=======
-	drawFredrick(){
-
-        if(this.moving == true){
-            noFill();
-        }
-        else{
-            fill(245, 245, 66,255)
-        }
-
-    //translate (200,0)
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-      rect(0,-100,50,50);
-      rect(50,-100,50,50);
-      rect(-0,-50,50,50);
-      rect(-50,-50,50,50);
-      rect(0,0,50,50);
->>>>>>> Stashed changes
-    pop();
-	}
-}
-
-<<<<<<< Updated upstream
 class Fredrick {
 	constructor(x,y,r, moving) {
         this.x = x;
@@ -558,8 +335,6 @@ class Fredrick {
 	}
 }
 
-=======
->>>>>>> Stashed changes
 class Lorelai {
 	constructor(x,y,r, moving) {
         this.x = x;
@@ -597,7 +372,6 @@ class Nathaniel {
         this.r = r;
         this.moving = moving;
 
-<<<<<<< Updated upstream
 	}
 	drawNathaniel(){
 
@@ -621,168 +395,6 @@ class Nathaniel {
 	}
 }
 
-class Theodore {
-	constructor(x,y,r, moving) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.moving = moving;
-
-	}
-	drawTheodore(){
-
-        if(this.moving == true){
-            noFill();
-        }
-        else{
-            fill(3, 40, 255,255)
-        }
-
-    //translate (200,0)
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-    rect(-50,0,50,50);
-    rect(0,0,50,50);
-    rect(50,0,50,50);
-    rect(0,50,50,50);
-    rect(0,100,50,50);
-    pop();
-	}
-}
-
-class Pilar {
-	constructor(x,y,r, moving) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.moving = moving;
-
-	}
-	drawPilar(){
-
-        if(this.moving == true){
-            noFill();
-        }
-        else{
-            fill(3, 240, 250,255)
-        }
-
-    //translate (200,0)
-    push();
-    translate (this.x,this.y);
-    erotate (this.r);
-    rect(0,0,50,50);
-    rect(-50,50,50,50);
-    rect(0,50,50,50);
-    rect(-50,100,50,50);
-    rect(0,100,50,50);
-    pop();
-	}
-}
-
-class Ulysess {
-	constructor(x,y,r,moving) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.moving = moving;
-	}
-	drawUlysess(){
-    if(this.moving == true){
-        noFill();
-    }
-    else{
-        fill(11, 71, 42, 255)
-    }
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-    rect(-75, -50, 50, 50);
-    rect(-75, 0, 50, 50);
-    rect(-25, 0, 50, 50);
-    rect(25, 0, 50, 50);
-    rect(25, -50, 50, 50);
-    pop();
-	}
-}
-
-class Vector {
-	constructor(x,y,r,moving) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.moving = moving;
-	}
-	drawVector(){
-=======
-	}
-	drawNathaniel(){
-
->>>>>>> Stashed changes
-        if(this.moving == true){
-            noFill();
-        }
-        else{
-<<<<<<< Updated upstream
-            fill(209, 71, 202, 255)
-        }
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-    rect(-75, -75, 50, 50);
-    rect(-75, -25, 50, 50);
-    rect(-75, 25, 50, 50);
-    rect(-25, 25, 50, 50);
-    rect(25, 25, 50, 50);
-=======
-            fill(255, 0, 10,255)
-        }
-
-    //translate (200,0)
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-    rect(0,50,50,50);
-    rect(0,0,50,50);
-    rect(50,-50,50,50);
-    rect(50,0,50,50);
-    rect(50,-100,50,50);
->>>>>>> Stashed changes
-    pop();
-	}
-}
-
-<<<<<<< Updated upstream
-class William {
-	constructor(x,y,r,moving) {
-        this.x = x;
-
-        this.y = y;
-        this.r = r;
-        this.moving = moving;
-	}
-	drawWilliam(){
-        if(this.moving == true){
-            noFill();
-        }
-        else{
-            fill(219, 129, 16, 255)
-        }
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-    rect(-75, -75, 50, 50);
-    rect(-75, -25, 50, 50);
-    rect(-25, -25, 50, 50);
-    rect(-25, 25, 50, 50);
-    rect(25, 25, 50, 50);
-    pop();
-	}
-}
-
-class Xavier {
-=======
 class Theodore {
 	constructor(x,y,r, moving) {
         this.x = x;
@@ -844,22 +456,18 @@ class Pilar {
 }
 
 class ulysess {
->>>>>>> Stashed changes
 	constructor(x,y,r,moving) {
         this.x = x;
         this.y = y;
         this.r = r;
         this.moving = moving;
 	}
-<<<<<<< Updated upstream
-	drawXavier(){
-=======
 	drawUlysess(){
     if(this.moving == true){
         noFill();
     }
     else{
-        fill(11, 71, 42, 255)
+        fill(11, 71, 42,255)
     }
     push();
     translate (this.x,this.y);
@@ -869,45 +477,6 @@ class ulysess {
     rect(-25, 0, 50, 50);
     rect(25, 0, 50, 50);
     rect(25, -50, 50, 50);
-    pop();
-	}
-}
-
-class vector {
-	constructor(x,y,r,moving) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.moving = moving;
-	}
-	drawVector(){
->>>>>>> Stashed changes
-        if(this.moving == true){
-            noFill();
-        }
-        else{
-<<<<<<< Updated upstream
-            fill(33, 89, 78, 255)
-=======
-            fill(209, 71, 202, 255)
->>>>>>> Stashed changes
-        }
-    push();
-    translate (this.x,this.y);
-    rotate (this.r);
-<<<<<<< Updated upstream
-
-    rect(-75, -25, 50, 50);
-    rect(-25, -25, 50, 50);
-    rect(-25, 25, 50, 50);
-    rect(25, -25, 50, 50);
-=======
-    rect(-75, -75, 50, 50);
-    rect(-75, -25, 50, 50);
-    rect(-75, 25, 50, 50);
-    rect(-25, 25, 50, 50);
-    rect(25, 25, 50, 50);
->>>>>>> Stashed changes
     pop();
 	}
 }

@@ -514,11 +514,11 @@ function mouseReleased(){
 
 function draw(){
   background("purple")
-  fill("white");
+  fill("black");
   textSize(15);
-  text("Instruction: Try to move all the pieces to the grid. Click and drag to move pieces and ", 880, 500);
-  text("press space to rotate them. (There must be 4 unused squares. use this to your advantage). ", 880, 520);
-  text("Reload to restart. Made by Justin and Marco. Have Fun!", 880, 540);
+  text("Instruction: Try to move all the pieces to the grid. Click and drag to move pieces and ", 840, 500);
+  text("press space to rotate them. (There must be 4 unused squares. use this to your advantage). ", 840, 520);
+  text("Reload to restart. Made by Justin and Marco. Have Fun!", 840, 540);
   I.drawIvanka ();
   F.drawFredrick();
   L.drawLorelai();

@@ -514,11 +514,12 @@ function mouseReleased(){
 
 function draw(){
   background("purple")
-  fill("black");
+  fill("white");
   textSize(15);
-  text("Instruction: Try to move all the pieces to the grid. Click and drag to move pieces and ", 840, 500);
-  text("press space to rotate them. (There must be 4 unused squares. use this to your advantage). ", 840, 520);
-  text("Reload to restart. Made by Justin and Marco. Have Fun!", 840, 540);
+  text("Instructions: Try to fit all the pieces into the grid. Click and drag to move pieces and ", 840, 500);
+  text("press the spacebar to rotate them. There will be 4 open squares if none of your pieces ", 840, 520);
+  text("are overlapping. Use this to your advantage.")
+  text("Press reload to restart. Made by Marco and Justin. Have Fun!", 840, 540);
   I.drawIvanka ();
   F.drawFredrick();
   L.drawLorelai();
